@@ -1,0 +1,45 @@
+
+<!-- get my company -->
+<div align="center">
+	<p>
+		<br />
+	<h2>Get The Details Of My Company</h2>
+	<br />
+	<button class="btn btn-primary" ng-click="func()">Get My Details</button>
+	<br /> <br />
+	<div ng-model="company" ng-hide="hideMyCompanyDetails">
+	<h4 class="text-success">
+		company id: {{company.id}} <br /> 
+		company name: {{company.compName}} <br /> 
+		company password: {{company.password}} <br /> 
+		company email: {{company.email}} <br />
+		</h4>
+		<hr />
+		<table class="table table-striped table-hover " ng-hide="hideCouponTable">
+			<tr class="success">
+				<td>id</td>
+				<td>title</td>
+				<td>start date</td>
+				<td>end date</td>
+				<td>amount</td>
+				<td>type</td>
+				<td>message</td>
+				<td>price</td>
+				<td>image</td>
+			</tr>
+			<tr ng-repeat="coupon in company.coupons | orderBy: 'id' ">
+				<td>{{coupon.id}}</td>
+				<td>{{coupon.title}}</td>
+				<td>{{coupon.startDate}}</td>
+				<td>{{coupon.endDate}}</td>
+				<td>{{coupon.amount}}</td>
+				<td>{{coupon.type}}</td>
+				<td>{{coupon.message}}</td>
+				<td>{{coupon.price}}</td>
+				<td>{{coupon.image}}</td>
+			</tr>
+		</table>
+	</div>
+	<div ng-show="result">{{resultString}}</div>
+	</p>
+</div>

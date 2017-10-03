@@ -1,0 +1,28 @@
+<!-- remove customer  -->
+<div align="center">
+	<div class="row">
+		<div class="well bs-component">
+			<form class="form-horizontal">
+				<fieldset>
+					<h2>Remove Customer</h2>
+					<div class="form-group">
+						<input class="form-control" type="text"
+							placeholder="enter customer id" ng-model="custID" required><br />
+					</div>
+					<div class="form-group">
+						<button class="btn btn-primary" ng-click="func()">Remove
+							Customer</button>
+					</div>
+					<div class="alert alert-success" role="alert"
+						ng-show="resultSuccess">
+						<strong>{{resultString}}</strong>
+					</div>
+					<div class="alert alert-warning" role="alert"
+						ng-show="resultWarning">
+						<strong>{{resultString}}</strong>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>

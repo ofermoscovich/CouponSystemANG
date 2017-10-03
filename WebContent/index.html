@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Coupon System-Login</title>
+    <!-- <link type="text/css" href="StyleSheet1.CSS" -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script type="text/javascript" src="WebLoginUI/login.controller.js"></script>
+</head>
+<body background="pictures/pic.jpg" title="Red Hair Children using Coupons Also">
+    <div ng-app="couponSystem">
+        <!-- screen 1 -->
+				<p id="demo"></p>
+		<script>
+		var d = new Date();
+		document.getElementById("demo").innerHTML = d;
+		</script>
+        <h1 align="center" style="background-color: #00FFFF">
+            Welcome to Coupon System</h1>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div ng-controller="toDoController">
+            <form id="loginForm" method="get" target="_self" align="center">
+                <input type="text" style="width: 100pt" id="user" name="user" placeholder="user name"
+                    required size="20" maxlength="20" title="Enter your user name" ng-model="user" ng-click="resultLogin = false"><br />
+                <input type="password" style="width: 100pt" id="pass" name="pass" placeholder="password"
+                    required size="20" maxlength="20" title="Enter your chosen password" ng-model="pass" ng-click="resultLogin = false"><br />
+                <select id="Select1" style="width: 103pt" placeholder="password" required ng-model="facade"
+                    title="Enter your user type (Customer/Company or Administrator)..." ng-click="resultLogin = false">
+                    <option value="admin">Administrator</option>
+                    <option value="customer">Customer</option>
+                    <option value="company">Company</option>
+                </select><br />
+                <button style="width: 103pt" ng-click="login()">Login</button>
+            </form>
+            <div ng-show="resultLogin" ng-style="myStyle" align="center">
+                {{resultString}}
+                <div ng-bind-html="WebPostLoginUI/mainPage.html"></div>
+            </div>
+           
+        </div>
+        <div>
+            <br />
+            <h5 align="center">
+                <!-- <hr /> -->
+                This site was created by <a href="https://github.com/ofermoscovich">
+                    Ofer Moscovich</a> &copy; <a href="mailto:ofermoscovich@yahoo.com">עופר מוסקוביץ</a></h5>
+            <hr />
+
+            <!-- screen 2 -->
+            
+        </div>
+    </div>
+</body>
+</html>

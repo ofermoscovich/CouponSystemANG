@@ -1,0 +1,35 @@
+<!-- get coupon -->
+                <div align="center">
+	<div class="row">
+		<div class="well bs-component">
+			<form class="form-horizontal">
+				<fieldset>
+                    <h2>Get Coupon Details</h2>
+                    					<div class="form-group">
+                    
+                        <input class="form-control" type="text" placeholder="enter coupon id" ng-model="coupID"><br />
+                        							</div>
+                        					<div class="form-group">
+                        <button class="btn btn-primary" ng-click="func()">Get Coupon</button>
+                        		</div>
+                        <div ng-model="coupon" ng-hide="hideCouponDetails">
+                        		<h4 class="text-success">
+                            coupon id: {{coupon.id}}<br />
+                            coupon title: {{coupon.title}}<br />
+                            coupon start date: {{coupon.startDate}}<br />
+                            coupon end date: {{coupon.endDate}}<br />
+                            coupon amount: {{coupon.amount}}<br />
+                            coupon type: {{coupon.type}}<br />
+                            coupon message: {{coupon.message}}<br />
+                            coupon price: {{coupon.price}}<br />
+                            coupon image: {{coupon.image}}<br />
+                            </h4>
+                        </div>
+                        <div class="alert alert-warning" role="alert" ng-show="result">
+                        <strong>{{resultString}}</strong>
+                        </div>
+                   </fieldset>
+			</form>
+		</div>
+	</div>
+</div>

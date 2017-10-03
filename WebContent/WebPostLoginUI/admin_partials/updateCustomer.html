@@ -1,0 +1,32 @@
+<!-- update customer -->
+<div align="center">
+	<div class="row">
+		<div class="well bs-component">
+			<form class="form-horizontal">
+				<fieldset>
+					<h2>Update Customer</h2>
+					<div class="form-group">
+						<input class="form-control" type="text"
+							placeholder="enter customer id" ng-model="customerID" required><br />
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="password"
+							placeholder="enter new password" ng-model="customerPassword" required><br />
+					</div>
+					<div class="form-group">
+						<button class="btn btn-primary" ng-click="func()">Update
+							Customer</button>
+					</div>
+					<div class="alert alert-success" role="alert"
+						ng-show="resultSuccess">
+						<strong>{{resultString}}</strong>
+					</div>
+					<div class="alert alert-warning" role="alert"
+						ng-show="resultWarning">
+						<strong>{{resultString}}</strong>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>

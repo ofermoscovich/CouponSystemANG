@@ -1,0 +1,26 @@
+<!-- get all customers -->
+<div align="center">
+	<p>
+		<br />
+	<h2>Get The Details Of All The Customers</h2>
+	<br />
+	<button class="btn btn-primary" ng-click="func()">Get
+		Customers</button>
+	<br /> <br />
+	<table class="table table-striped table-hover "
+		ng-hide="hideCustomersDetails">
+		<tr class="success">
+			<td>id</td>
+			<td>name</td>
+			<td>password</td>
+		</tr>
+
+		<tr ng-repeat="cust in customers | orderBy: 'id' ">
+			<td>{{cust.id}}</td>
+			<td>{{cust.custName}}</td>
+			<td>{{cust.password}}</td>
+		</tr>
+	</table>
+	<div ng-show="result">{{resultString}}</div>
+	</p>
+</div>
