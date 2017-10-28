@@ -1,0 +1,40 @@
+<!-- update coupon -->
+<div align="center">
+	<div class="row">
+		<div class="well bs-component">
+			<form class="form-horizontal">
+				<fieldset>
+					<h2>Update Coupon</h2>
+					<div class="form-group">
+						<input class="form-control" type="text" placeholder="enter coupon id"
+							ng-model="couponID" required><br />
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" placeholder="enter new amount"
+							ng-model="couponAmount" required><br />
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" placeholder="enter new price"
+							ng-model="couponPrice" required><br />
+					</div>
+					<h4>enter new end date</h4>
+					<div class="form-group">
+						<input class="form-control" type="date"
+							ng-model="couponEndDate" required><br />
+					</div>
+					<div class="form-group">
+						<button class="btn btn-primary" ng-click="func()">Update Coupon</button>
+					</div>
+					<div class="alert alert-success" role="alert"
+						ng-show="resultSuccess">
+						<strong>{{resultString}}</strong>
+					</div>
+					<div class="alert alert-warning" role="alert"
+						ng-show="resultWarning">
+						<strong>{{resultString}}</strong>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>

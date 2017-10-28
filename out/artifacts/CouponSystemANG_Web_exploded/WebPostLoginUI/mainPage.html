@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html ng-app="csw">
+<head>
+<title>Coupon System Web</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+<script type="text/javascript" src="controllers.js"></script>
+<script type="text/javascript" src="AdminJS.js"></script>
+<script type="text/javascript" src="CompanyJS.js"></script>
+<script type="text/javascript" src="CustomerJS.js"></script>
+<link rel="stylesheet" type="text/css" href="design.css">
+<base href="http://localhost:8080/csw/">
+</head>
+<body>
+	<!-- header -->
+	<div class="myheader">
+		<h1>The Coupon System</h1>
+	</div>
+	<!-- login -->
+<!-- 	<div class="mylogin">
+		<div ng-controller="login" ng-show="hideMenu.showLogin" align="center">
+			<div class="row">
+				<br />
+				<div class="well bs-component">
+					<form class="form-horizontal">
+						<fieldset>
+							<h1>Login</h1>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Username"
+									ng-model="UserName" required>
+							</div>
+							<br />
+							<div class="form-group">
+								<input type="password" class="form-control"
+									placeholder="Password" ng-model="Password" required>
+							</div>
+							<br />
+							<div class="form-group">
+								<select ng-model="ClientType" class="form-control" >
+									<option value="">Choose Login Type</option>
+									<option>Administrator</option>
+									<option>Company</option>
+									<option>Customer</option>
+								</select>
+							</div>
+							<br />
+							<div class="form-group">
+								<button class="btn btn-success" ng-click="login()">Login</button>
+							</div>
+							<div class="alert alert-warning" role="alert"
+								ng-show="resultWarning" align="center">
+								<strong>{{resultString}}</strong>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<!-- menu -->
+	<div ng-controller="menu" class="mymenu">
+		<!--
+        style="float:left"
+            -->
+		<!--   {{hideMenu.adminMenu}}{{hideMenu.companyMenu}}{{hideMenu.customerMenu}} -->
+
+		<div ng-hide="hideMenu.adminMenu">
+			<div class="row">
+				<button class="btn btn-success" ng-click="adminLogout()">Logout</button>
+				<br />
+				<h3>Admin Menu</h3>
+				<br />
+
+				<div class="list-group table-of-contents">
+
+					<a class="list-group-item" href="createCompany">Create Company</a>
+					<a class="list-group-item" href="removeCompany">Remove Company</a>
+					<a class="list-group-item" href="updateCompany">Update Company</a>
+					<a class="list-group-item" href="getAllCompanies">Get All
+						Companies</a> <a class="list-group-item" href="getCompany">Get
+						Company</a> <a class="list-group-item" href="createCustomer">Create
+						Customer</a> <a class="list-group-item" href="removeCustomer">Remove
+						Customer</a> <a class="list-group-item" href="updateCustomer">Update
+						Customer</a> <a class="list-group-item" href="getAllCustomers">Get
+						All Customers</a> <a class="list-group-item" href="getCustomer">Get
+						Customer</a> <a class="list-group-item" href="getAllCoupons">Get
+						All Coupons</a> <a class="list-group-item" href="getCoupon">Get
+						Coupon</a>
+				</div>
+			</div>
+		</div>
+
+		<div ng-hide="hideMenu.companyMenu">
+			<div class="row">
+				<button class="btn btn-success" ng-click="companyLogout()">Logout</button>
+				<br />
+
+				<h3>Company Menu</h3>
+				<br />
+				<div class="list-group table-of-contents">
+					<a class="list-group-item" href="createCoupon">Create Coupon</a> <a
+						class="list-group-item" href="removeCoupon">Remove Coupon</a> <a
+						class="list-group-item" href="updateCoupon">Update Coupon</a> <a
+						class="list-group-item" href="getMyCompany">Get Company</a> <a
+						class="list-group-item" href="getCoupons">Get Coupons</a> <a
+						class="list-group-item" href="getCouponsByType">Get Coupons By
+						Type</a> <a class="list-group-item" href="getCouponsByPrice">Get
+						Coupons By Price</a> <a class="list-group-item"
+						href="getCouponsByDate">Get Coupons By Date</a>
+				</div>
+			</div>
+		</div>
+		<div ng-hide="hideMenu.customerMenu">
+			<div class="row">
+				<button class="btn btn-success" ng-click="customerLogout()">Logout</button>
+				<br />
+
+				<h3>Customer Menu</h3>
+				<br />
+				<div class="list-group table-of-contents">
+					<a class="list-group-item" href="purchaseCoupon">Purchase
+						Coupon</a> <a class="list-group-item" href="getPurchasedCoupons">Get
+						All Purchased Coupons</a> <a class="list-group-item"
+						href="getPurchasedCouponsByType">Get Purchased Coupons By Type</a>
+					<a class="list-group-item" href="getPurchasedCouponsByPrice">Get
+						Purchased Coupons By Price</a>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- main -->
+	<div ng-view class="mycontainer"></div>
+	<!-- footer -->
+	<div class="myfooter">
+		<h5>Ofer Moscovich</h5>
+	</div>
+
+</body>
+</html>

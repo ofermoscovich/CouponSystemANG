@@ -1,0 +1,62 @@
+<!-- create coupon  -->
+<div align="center">
+	<div class="row">
+		<div class="well bs-component">
+			<form class="form-horizontal">
+				<fieldset>
+					<h2>Create Coupon</h2>
+					<div class="form-group">
+						<input class="form-control" type="text" placeholder="enter title"
+							ng-model="couponTitle" required><br /> 
+							<h4>enter start date</h4>
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="date" ng-model="couponStartDate" required><br />
+						<h4>enter end date</h4>
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="date" ng-model="couponEndDate" required><br />
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" placeholder="enter amount"
+							ng-model="couponAmount" required><br />
+					</div>
+					<div class="form-group">
+						<select class="form-control" ng-model="couponType" required>
+							<option value="">choose coupon type</option>
+							<option>Electrical</option>
+							<option>Health</option>
+							<option>Leisure</option>
+							<option>Travel</option>
+							<option>Sports</option>
+						</select><br />
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text"
+							placeholder="enter message" ng-model="couponMessage" required><br />
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" placeholder="enter price"
+							ng-model="couponPrice" required><br />
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" placeholder="enter image"
+							ng-model="couponImage" required><br />
+					</div>
+					<div class="form-group">
+						<button class="btn btn-primary" ng-click="func()">Create
+							Coupon</button>
+					</div>
+					<div class="alert alert-success" role="alert"
+						ng-show="resultSuccess">
+						<strong>{{resultString}}</strong>
+					</div>
+					<div class="alert alert-warning" role="alert"
+						ng-show="resultWarning">
+						<strong>{{resultString}}</strong>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
